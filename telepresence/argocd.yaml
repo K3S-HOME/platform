@@ -8,9 +8,9 @@ metadata:
 spec:
   project: default
   sources:
-  - repoURL: https://app.getambassador.io
-    chart: telepresence
-    targetRevision: 2.20.2
+  - repoURL: ghcr.io/telepresenceio
+    chart: telepresence-oss
+    targetRevision: 2.25.2
     helm:
       releaseName: traffic-manager
       valueFiles:

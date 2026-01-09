@@ -1,39 +1,7 @@
-# Telepresence Helm Values
-# Chart: https://github.com/telepresenceio/telepresence
+# Telepresence OSS Helm Values
+# Chart: oci://ghcr.io/telepresenceio/telepresence-oss
 
 replicaCount: 1
-
-# Traffic Manager resources
-resources:
-  requests:
-    cpu: 50m
-    memory: 128Mi
-  limits:
-    memory: 128Mi
-
-# Agent resources (injected sidecar)
-agent:
-  resources:
-    requests:
-      cpu: 50m
-      memory: 64Mi
-    limits:
-      memory: 64Mi
-  initResources:
-    requests:
-      cpu: 25m
-      memory: 32Mi
-    limits:
-      memory: 32Mi
-
-# Hooks resources
-hooks:
-  resources:
-    requests:
-      cpu: 25m
-      memory: 32Mi
-    limits:
-      memory: 32Mi
 
 # Log level
 logLevel: info
@@ -46,8 +14,20 @@ agentInjector:
 # RBAC configuration
 managerRbac:
   create: true
-  namespaced: false
 
-# Client RBAC (disabled - managed separately if needed)
-clientRbac:
-  create: false
+# Agent configuration
+agent:
+  port: 9900
+  initContainer:
+    enabled: true
+
+# Hooks configuration
+hooks:
+  busybox:
+    registry: docker.io
+    image: busybox
+    tag: latest
+  curl:
+    registry: docker.io
+    image: curlimages/curl
+    tag: 8.1.1
