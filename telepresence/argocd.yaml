@@ -12,6 +12,7 @@ spec:
     chart: telepresence
     targetRevision: 2.20.2
     helm:
+      releaseName: traffic-manager
       valueFiles:
       - $values/telepresence/helm-values.yaml
   - repoURL: https://github.com/K3S-HOME/platform.git
