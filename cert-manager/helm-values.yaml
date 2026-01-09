@@ -37,9 +37,9 @@ cainjector:
   resources:
     requests:
       cpu: 23m
-      memory: 96Mi
+      memory: 192Mi
     limits:
-      memory: 96Mi
+      memory: 192Mi
   # Affinity - Soft Anti-Affinity to spread pods across nodes
   affinity:
     podAntiAffinity:
