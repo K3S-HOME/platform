@@ -64,10 +64,10 @@ controller:
   # Resource settings (from VPA recommendations)
   resources:
     requests:
-      cpu: 126m
-      memory: 1700Mi
+      cpu: 350m
+      memory: 640Mi
     limits:
-      memory: 1700Mi
+      memory: 640Mi
 
 # =============================================================================
 # API SERVER (Deployment)
@@ -96,9 +96,9 @@ server:
   resources:
     requests:
       cpu: 15m
-      memory: 138Mi
+      memory: 121Mi
     limits:
-      memory: 138Mi
+      memory: 121Mi
 
 # =============================================================================
 # REPO SERVER (Deployment)
@@ -115,10 +115,10 @@ repoServer:
 
   resources:
     requests:
-      cpu: 15m
-      memory: 1536Mi
+      cpu: 49m
+      memory: 933Mi
     limits:
-      memory: 1536Mi
+      memory: 933Mi
 
 # =============================================================================
 # REDIS (Deployment)
