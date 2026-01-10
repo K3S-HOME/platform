@@ -8,19 +8,19 @@ replicaCount: 1
 
 resources:
   requests:
-    cpu: 15m
-    memory: 100Mi
+    cpu: 23m
+    memory: 115Mi
   limits:
-    memory: 100Mi
+    memory: 115Mi
 
 webhook:
   replicaCount: 1
   resources:
     requests:
-      cpu: 15m
-      memory: 100Mi
+      cpu: 23m
+      memory: 115Mi
     limits:
-      memory: 100Mi
+      memory: 115Mi
   # Affinity - Soft Anti-Affinity to spread pods across nodes
   affinity:
     podAntiAffinity:
@@ -36,10 +36,10 @@ cainjector:
   replicaCount: 1
   resources:
     requests:
-      cpu: 15m
-      memory: 237Mi
+      cpu: 23m
+      memory: 230Mi
     limits:
-      memory: 237Mi
+      memory: 230Mi
   # Affinity - Soft Anti-Affinity to spread pods across nodes
   affinity:
     podAntiAffinity:
