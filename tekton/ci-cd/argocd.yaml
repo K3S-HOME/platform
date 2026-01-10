@@ -18,9 +18,8 @@ spec:
     namespace: tekton-pipelines
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true
-      allowEmpty: false
     syncOptions:
     - CreateNamespace=true
     - PrunePropagationPolicy=foreground
